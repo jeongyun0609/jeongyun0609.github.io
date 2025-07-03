@@ -133,7 +133,6 @@ span.highlight {
 
 
 
-/* 기본 (데스크탑): 이미지 왼쪽, 텍스트 오른쪽 */
 .publication {
   display: flex;
   flex-direction: row;
@@ -148,11 +147,12 @@ span.highlight {
   flex: 1;
 }
 
-/* 모바일 (화면 너비 768px 이하): 이미지 위, 텍스트 아래 */
 @media (max-width: 768px) {
   .publication {
+    display: flex;
     flex-direction: column;
-    text-align: center;
+    align-items: flex-start;    /* 추가: 컨테이너 내 항목을 왼쪽으로 정렬 */
+    text-align: left;           /* 왼쪽 정렬로 변경 */
   }
   .publication .pub-image,
   .publication .pub-text {
